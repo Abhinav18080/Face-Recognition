@@ -73,7 +73,7 @@ while True:
 
                     opentabscondition = False
                 elif opentabscondition and name == "Adarsh Manosh Pillai":
-                    print("TBD")
+                    print("Adarsh is working. TBD")
             else:    
                 print("Error. Dont know who you are")
 
