@@ -1,6 +1,7 @@
 Things to do:
 - Add adarsh's urls
 - check if the website is open, if its not then open it else open the next url in the list thats not open
+- clean the code by removing duplicate code and making helper functions
 - make it so that this thing runs everytime you unlock the laptop
 
 
