@@ -5,6 +5,27 @@ import webbrowser
 import time
 import subprocess
 
+def is_website_open(target_url):
+    script = f'''
+    tell application "Google Chrome"
+        set windowList to windows
+        repeat with aWindow in windowList
+            set tabList to tabs of aWindow
+            repeat with aTab in tabList
+                if URL of aTab contains "{target_url}" then
+                    return true
+                end if
+            end repeat
+        end repeat
+    end tell
+    return false
+    '''
+
+    process = subprocess.Popen(['osascript', '-e', script], stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+    stdout, vendathesadhanam = process.communicate()
+    return stdout.decode('utf-8').strip() == 'true'
+
 video_capture = cv2.VideoCapture(0)
 
 abhi_image = face_recognition.load_image_file("abhi.jpeg")
@@ -67,13 +88,31 @@ while True:
                     ]
 
                     for url in urls:
-                        subprocess.Popen(['open', '-a', 'Google Chrome', url])
-                        time.sleep(0.5)
-                        print("url: "+ url)
+                        if is_website_open(url) == False:
+                            subprocess.Popen(['open', '-a', 'Google Chrome', url])
+                            time.sleep(0.5)
+                            print("url: "+ url)
+                        else:
+                            print(url + " is already open")
 
                     opentabscondition = False
                 elif opentabscondition and name == "Adarsh Manosh Pillai":
-                    print("Adarsh is working. TBD")
+                    print("This is Adarsh. Going to open tabs now")   
+                    urls = [
+                        'https://docs.python.org/3/library/webbrowser.html',
+                        'https://www.amazon.com',
+                        'https://www.thalappakatti.us/'
+                    ]
+
+                    for url in urls:
+                        if is_website_open(url) == False:
+                            subprocess.Popen(['open', '-a', 'Google Chrome', url])
+                            time.sleep(0.5)
+                            print("url: "+ url)
+                        else:
+                            print(url + " is already open")
+
+                    opentabscondition = False
             else:    
                 print("Error. Dont know who you are")
 
@@ -100,4 +139,4 @@ while True:
         break
 
 video_capture.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows
