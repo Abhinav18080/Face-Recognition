@@ -82,9 +82,8 @@ while True:
                 if opentabscondition and name == "Abhinav Manosh Pillai":          
                     print("This is Abhinav. Going to open tabs now")   
                     urls = [
-                        'https://www.atptour.com/en',
-                        'https://www.amazon.com',
-                        'https://www.thalappakatti.us/'
+                        'https://canvas.iastate.edu/',
+                        'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox'
                     ]
 
                     for url in urls:
