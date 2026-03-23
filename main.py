@@ -100,7 +100,6 @@ while True:
                     urls = [
                         'https://docs.python.org/3/library/webbrowser.html',
                         'https://www.amazon.com',
-                        'https://www.thalappakatti.us/'
                     ]
 
                     for url in urls:
