@@ -28,7 +28,7 @@ def is_website_open(target_url):
 
 video_capture = cv2.VideoCapture(0)
 
-abhi_image = face_recognition.load_image_file("abhi.jpeg")
+abhi_image = face_recognition.load_image_file("/Users/abhinavmanoshpillai/Documents/untitled folder/python backend/Face Recognition/Face-Recognition/abhi.jpeg")
 abhi_face_encoding = face_recognition.face_encodings(abhi_image)[0]
 
 known_face_encoding = [
