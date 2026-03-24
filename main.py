@@ -31,12 +31,8 @@ video_capture = cv2.VideoCapture(0)
 abhi_image = face_recognition.load_image_file("abhi.jpeg")
 abhi_face_encoding = face_recognition.face_encodings(abhi_image)[0]
 
-adarsh_image = face_recognition.load_image_file("adarsh.jpeg")
-adarsh_face_encoding = face_recognition.face_encodings(adarsh_image)[0]
-
 known_face_encoding = [
-    abhi_face_encoding,
-    adarsh_face_encoding
+    abhi_face_encoding
 ]
 
 known_face_names = [
