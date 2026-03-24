@@ -40,8 +40,7 @@ known_face_encoding = [
 ]
 
 known_face_names = [
-    "Abhinav Manosh Pillai",
-    "Adarsh Manosh Pillai"
+    "Abhinav Manosh Pillai"
 ]
 
 #variables
@@ -84,22 +83,6 @@ while True:
                     urls = [
                         'https://canvas.iastate.edu/',
                         'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox'
-                    ]
-
-                    for url in urls:
-                        if is_website_open(url) == False:
-                            subprocess.Popen(['open', '-a', 'Google Chrome', url])
-                            time.sleep(0.5)
-                            print("url: "+ url)
-                        else:
-                            print(url + " is already open")
-
-                    opentabscondition = False
-                elif opentabscondition and name == "Adarsh Manosh Pillai":
-                    print("This is Adarsh. Going to open tabs now")   
-                    urls = [
-                        'https://docs.python.org/3/library/webbrowser.html',
-                        'https://www.amazon.com',
                     ]
 
                     for url in urls:
